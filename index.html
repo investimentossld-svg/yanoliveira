@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yan Oliveira - Estrategista Digital e Investidor</title>
+    
+    <!-- ======== FAVICON ======== -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./favicon.png">
+    
+    <!-- ======== OPEN GRAPH - IMAGEM PARA WHATSAPP/REDES SOCIAIS ======== -->
+    <meta property="og:title" content="Yan Oliveira - Estrategista Digital e Investidor">
+    <meta property="og:description" content="Ensino pessoas a ganharem dinheiro no digital de forma estratégica, profissional e sustentável.">
+    <meta property="og:image" content="https://euyanoliveira.com/og-image.jpg?v=2">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://euyanoliveira.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yan Oliveira">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- ======== TWITTER CARD ======== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yan Oliveira - Estrategista Digital e Investidor">
+    <meta name="twitter:description" content="Ensino pessoas a ganharem dinheiro no digital de forma estratégica, profissional e sustentável.">
+    <meta name="twitter:image" content="https://euyanoliveira.com/og-image.jpg?v=2">
+    
+    <!-- Google Fonts - Tipografia Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ======== RESET E CONFIGURAÇÕES GERAIS ======== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Paleta de cores escura sofisticada e equilibrada */
+            --fundo-principal: #1a1a1a;
+            --fundo-secundario: #252525;
+            --fundo-cinza: #2d2d2d;
+            --preto-fundo: #0d0d0d;
+            --cinza-escuro: #404040;
+            --cinza-medio: #525252;
+            --cinza-claro: #a0a0a0;
+            --branco-suave: #e8e8e8;
+            
+            /* Cores Douradas (para logo, linha, etc.) */
+            --dourado: #d4af37;
+            --dourado-escuro: #b8941f;
+            
+            /* Tipografia */
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-corpo: 'Inter', sans-serif;
+            
+            /* Sombras e efeitos */
+            --sombra-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --sombra-suave: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            --transicao-suave: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fonte-corpo);
+            background-color: var(--fundo-principal);
+            color: var(--branco-suave);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ======== MENU DE NAVEGAÇÃO ======== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--cinza-escuro);
+            transition: var(--transicao-suave);
+        }
+
+        .navbar.scrolled {
+            padding: 15px 0;
+            background: rgba(26, 26, 26, 0.98);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--fonte-titulos);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--branco-suave);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo span {
+            color: var(--dourado);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--cinza-claro);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: var(--transicao-suave);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--branco-suave);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--dourado);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--branco-suave);
+            margin: 3px 0;
+            transition: var(--transicao-suave);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* ======== CLASSES UTILITÁRIAS ======== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        /* ======== BOTÕES CTA COM TAMANHO NORMAL ======== */
+        
+        /* Estilo para os botões SECUNDÁRIOS */
+        .btn-premium {
+            display: inline-block;
+            width: 280px;
+            height: 65px;
+            background-image: url('./btn-default.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: transparent;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Estilo para o BOTÃO PRINCIPAL (Hero) */
+        .btn-hero {
+            background-image: url('./btn-hero.png');
+        }
+
+        /* Estilo para o BOTÃO DA COMUNIDADE */
+        .btn-comunidade {
+            background-image: url('./btn-comunidade.png');
+        }
+
+        /* ======== INÍCIO DAS ALTERAÇÕES CSS ======== */
+        /* Estilo para o BOTÃO DO INDICADOR */
+        .btn-indicador {
+            background-image: url('./btn-indicador.png');
+        }
+
+        /* Estilo para o BOTÃO DO GRUPO VIP */
+        .btn-vip {
+            background-image: url('./btn-vip.png');
+        }
+
+        /* Estilo para o BOTÃO DA CORRETORA */
+        .btn-corretora {
+            background-image: url('./btn-corretora.png');
+        }
+
+        /* Estilo para o BOTÃO DA MENTORIA */
+        .btn-mentoria {
+            background-image: url('./btn-mentoria.png');
+        }
+        /* ======== FIM DAS ALTERAÇÕES CSS ======== */
+
+
+        /* Efeito ao passar o mouse (hover) - aplicado a todos */
+        .btn-premium:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .titulo-secao {
+            font-family: var(--fonte-titulos);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--branco-suave);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .titulo-secao::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--dourado);
+        }
+
+        .texto-descritivo {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--cinza-claro);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* ======== HERO SECTION COM BANNER ======== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(180deg, var(--fundo-principal) 0%, var(--fundo-secundario) 100%);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 550px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 769px) {
+            .hero-image-container {
+                aspect-ratio: 1920 / 550;
+                height: auto;
+            }
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-wrapper:hover .hero-image {
+            transform: scale(1.05);
+        }
+
+        .hero-gold-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--dourado-escuro) 15%, 
+                var(--dourado-escuro) 85%, 
+                transparent);
+            z-index: 3;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(184, 148, 31, 0.4);
+        }
+
+        .hero-text-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0 80px 0;
+            animation: fadeInUp 1s ease-out;
+            position: relative;
+        }
+
+        .hero-text-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 26, 26, 0.85);
+            z-index: 1;
+        }
+
+        .hero-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 60px 40px;
+        }
+
+        .hero-nome {
+            font-family: var(--fonte-titulos);
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--branco-suave);
+            margin-bottom: 30px;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            animation: fadeInScale 1.2s ease-out;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-nome span {
+            color: var(--dourado);
+            display: inline-block;
+        }
+
+        .hero-descricao {
+            font-size: 22px;
+            color: var(--branco-suave);
+            line-height: 1.7;
+            margin-bottom: 50px;
+            animation: fadeIn 1.5s ease-out;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-destaque {
+            color: var(--dourado);
+            font-weight: 600;
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1.8s ease-out;
+        }
+
+        /* ======== SEÇÃO INDICADOR MT4 ======== */
+        .indicador-mt4 {
+            background: var(--fundo-secundario);
+            border-top: 1px solid var(--cinza-escuro);
+        }
+
+        .indicador-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .indicador-image {
+            position: relative;
+        }
+
+        .indicador-image-container {
+            width: 100%;
+            height: 500px;
+            background: var(--fundo-cinza);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--sombra-suave);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--cinza-escuro);
+        }
+
+        .indicador-screenshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-radius: 6px;
+        }
+
+        .indicador-image-container:hover .indicador-screenshot {
+            transform: scale(1.05);
+        }
+
+        .indicador-text h2 {
+            color: var(--branco-suave);
+        }
+
+        .indicador-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .indicador-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--cinza-claro);
+            font-size: 16px;
+        }
+
+        .indicador-features li i {
+            color: var(--dourado);
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        /* ======== SEÇÃO GRUPO VIP ======== */
+        .grupo-vip {
+            background: var(--fundo-principal);
+            border-top: 1px solid var(--cinza-escuro);
+        }
+
+        .vip-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .vip-text h2 {
+            color: var(--branco-suave);
+        }
+
+        .vip-image {
+            position: relative;
+        }
+
+        .vip-image-container {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vip-screenshot {
+            max-width: 100%; /* Ajustado para não esticar */
+            max-height: 100%; /* Ajustado para não esticar */
+            object-fit: contain; /* Ajustado para manter a proporção */
+            transition: transform 0.5s ease;
+        }
+
+        .vip-image-container:hover .vip-screenshot {
+            transform: scale(1.05);
+        }
+
+        /* ======== SEÇÃO CORRETORA DA LIVE (SIMPLIFICADA) ======== */
+        .ia-section {
+            background: linear-gradient(180deg, var(--fundo-secundario) 0%, #1e293b 100%);
+            border-top: 1px solid var(--cinza-escuro);
+        }
+
+        .ia-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ia-section .titulo-secao {
+            color: var(--branco-suave);
+        }
+
+        .ia-section .titulo-secao::after {
+            background: var(--dourado);
+        }
+
+        .ia-frase {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--branco-suave);
+            margin-bottom: 40px;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .ia-frase span {
+            color: var(--dourado);
+        }
+
+        .ia-cta {
+            margin-top: 40px;
+        }
+
+        /* ======== SEÇÃO DEPOIMENTOS ======== */
+        .depoimentos {
+            background: var(--fundo-secundario);
+            border-top: 1px solid var(--cinza-escuro);
+        }
+
+        .depoimentos-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .depoimentos-subtitulo {
+            font-size: 18px;
+            color: var(--cinza-claro);
+            margin-top: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .depoimento-item {
+            background: var(--fundo-principal);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicao-suave);
+            border: 1px solid var(--cinza-escuro);
+            position: relative;
+        }
+
+        .depoimento-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--sombra-premium);
+            border-color: var(--dourado);
+        }
+
+        .depoimento-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .depoimento-item:hover .depoimento-image {
+            transform: scale(1.05);
+        }
+
+        .depoimento-whatsapp {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .depoimento-whatsapp img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .depoimento-whatsapp:hover img {
+            transform: scale(1.05);
+        }
+
+        .depoimentos-cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* ======== SEÇÃO AUTORIDADE / MENTORIA ======== */
+        .autoridade {
+            background: var(--fundo-secundario);
+            border-top: 1px solid var(--cinza-escuro);
+        }
+
+        .autoridade-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .autoridade-content .titulo-secao {
+            margin-bottom: 40px;
+        }
+
+        .autoridade-foto-container {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .autoridade-foto {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--fundo-cinza);
+            border: 3px solid var(--dourado);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicao-suave);
+        }
+
+        .autoridade-foto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .autoridade-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .autoridade-frase {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--branco-suave);
+            line-height: 1.5;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .autoridade-frase span {
+            color: var(--dourado);
+            font-weight: 700;
+        }
+
+        /* ======== FOOTER ======== */
+        footer {
+            background: var(--preto-fundo);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--cinza-escuro);
+        }
+
+        .footer-text {
+            color: var(--cinza-medio);
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .footer-text span {
+            color: var(--dourado);
+            font-weight: 600;
+        }
+
+        /* ======== ANIMAÇÕES ======== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* ======== RESPONSIVIDADE ======== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--fundo-secundario);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--sombra-suave);
+                padding: 20px 0;
+                gap: 20px;
+            }
+            .nav-menu.active { left: 0; }
+            .hamburger { display: flex; }
+            .hero-nome { font-size: 48px; }
+            .hero-descricao { font-size: 18px; }
+            .hero-text { padding: 40px 20px; }
+            .hero-text-container { padding: 40px 0 60px 0; }
+            .indicador-content, .vip-content { grid-template-columns: 1fr; gap: 50px; }
+            .indicador-image-container, .vip-image-container { height: 400px; }
+            .titulo-secao { font-size: 36px; }
+            .ia-frase { font-size: 28px; }
+            .section-padding { padding: 80px 0; }
+            .ia-content { max-width: 90%; }
+            .autoridade-foto { width: 150px; height: 150px; }
+            .depoimentos-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+            .depoimento-whatsapp { height: 400px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-nome { font-size: 36px; }
+            .hero-descricao { font-size: 16px; }
+            .titulo-secao { font-size: 30px; }
+            .ia-frase { font-size: 24px; }
+            .section-padding { padding: 60px 0; }
+            .hero-image-container { height: 450px; }
+            .autoridade-foto { width: 120px; height: 120px; }
+            .depoimentos-grid { grid-template-columns: 1fr; }
+            .depoimento-whatsapp { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ======== MENU DE NAVEGAÇÃO ======== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Yan <span>Oliveira</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#indicador" class="nav-link">Autoridade</a></li>
+                <li><a href="#plataformas" class="nav-link">Grupo VIP</a></li>
+                <li><a href="#ia" class="nav-link">Corretora</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======== HERO SECTION COM BANNER ======== -->
+    <section class="hero" id="home">
+        <div class="hero-image-container">
+            <div class="hero-image-wrapper">
+                <div class="hero-image-placeholder">
+                    <picture>
+                        <source media="(min-width: 769px)" srcset="./banner-desktop.jpg">
+                        <source srcset="./banner-mobile.jpg">
+                        <img src="./banner-desktop.jpg" alt="Yan Oliveira" class="hero-image">
+                    </picture>
+                    <div class="hero-gold-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-text-container">
+            <div class="hero-text">
+                <h1 class="hero-nome">Yan <span>Oliveira</span></h1>
+                <p class="hero-descricao">
+                    Olá, sou Yan Oliveira. <span class="hero-destaque">Trader</span>, 
+                    <span class="hero-destaque">Especialista</span> em&nbsp;<span class="hero-destaque">Indicadores</span>. Faço live todos os dias, mostrando na prática como analisar o mercado, tomar decisões e aplicar gestão de risco, com conteúdo 100% educacional e gratuito.</p>
+                <div class="hero-cta">
+                    <a href="#indicador" class="btn-premium btn-hero">Conheça Meu Trabalho</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SEÇÃO INDICADOR MT4 ======== -->
+    <section id="indicador" class="indicador-mt4 section-padding fade-in">
+        <div class="container">
+            <div class="indicador-content">
+                <div class="indicador-text">
+                    <h2 class="titulo-secao">Indicador MT4 Exclusivo</h2>
+                    <div class="texto-descritivo">
+                        Desenvolvi um indicador exclusivo para MetaTrader 4 que combina análise técnica avançada com sinais precisos de entrada e saída. Ferramenta profissional para traders que buscam consistência e precisão em suas operações.
+                    </div>
+                    
+                    <ul class="indicador-features">
+                        <li><i class="fas fa-check-circle"></i> Sinais de compra e venda em tempo real</li>
+                        <li><i class="fas fa-check-circle"></i> Alertas sonoros e visuais configuráveis</li>
+                        <li><i class="fas fa-check-circle"></i> Análise múltipla de timeframes</li>
+                        <li><i class="fas fa-check-circle"></i> Integração com gestão de risco</li>
+                        <li><i class="fas fa-check-circle"></i> Suporte e atualizações gratuitas</li>
+                    </ul>
+                    
+                    <!-- ALTERAÇÃO: Adicionada a classe btn-indicador -->
+                    <a href="#" class="btn-premium btn-indicador" onclick="event.preventDefault(); handleIndicadorClick();">
+                        Obter Indicador Agora
+                    </a>
+                </div>
+                
+                <div class="indicador-image">
+                    <div class="indicador-image-container">
+                        <img src="./indicador-mt4-screenshot.jpg" alt="Screenshot do Indicador MT4" class="indicador-screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SEÇÃO GRUPO VIP ======== -->
+    <section id="plataformas" class="grupo-vip section-padding fade-in">
+        <div class="container">
+            <div class="vip-content">
+                <div class="vip-text">
+                    <h2 class="titulo-secao">Grupo VIP Exclusivo</h2>
+                    <div class="texto-descritivo">
+                        Tenha acesso a um ambiente exclusivo com traders sérios e focados em resultado. No Grupo VIP, realizo lives diárias com análises em tempo real, sinais validados e espaço para tirar todas as suas dúvidas. Este é o seu ponto de encontro para transformar conhecimento em lucro, com acompanhamento direto e sem rodeios.
+                    </div>
+                    
+                    <!-- ALTERAÇÃO: Adicionada a classe btn-vip -->
+                    <a href="#" class="btn-premium btn-vip" onclick="event.preventDefault(); handleVIPClick();">
+                        Quero entrar no Grupo VIP
+                    </a>
+                </div>
+                
+                <div class="vip-image">
+                    <div class="vip-image-container">
+                        <!-- ======== IMAGEM PNG SEM FUNDO, BORDA OU BADGE ======== -->
+                        <img src="./banner-do-vip.png" alt="Imagem do Grupo VIP" class="vip-screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SEÇÃO CORRETORA DA LIVE (SIMPLIFICADA) ======== -->
+    <section id="ia" class="ia-section section-padding fade-in">
+        <div class="container">
+            <div class="ia-content">
+                <h2 class="titulo-secao">Corretora da Live</h2>
+                <p class="ia-frase">
+                    A corretora que eu uso e confio para minhas operações. <span>Segurança</span>, 
+                    <span>agilidade</span> e <span>suporte</span> para você operar com tranquilidade.
+                </p>
+                
+                <div class="ia-cta">
+                    <!-- ALTERAÇÃO: Adicionada a classe btn-corretora -->
+                    <a href="https://trade.obynexbroker.com/register?aff=788123&amp;aff_model=revenue&amp;afftrack=" class="btn-premium btn-corretora" target="_blank">
+                        Abrir minha conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SEÇÃO DEPOIMENTOS ======== -->
+    <section id="depoimentos" class="depoimentos section-padding fade-in">
+        <div class="container">
+            <div class="depoimentos-header">
+                <h2 class="titulo-secao">O que dizem na comunidade</h2>
+                <p class="depoimentos-subtitulo">
+                    Veja o que nossos alunos estão falando sobre os resultados obtidos após aplicar nossas estratégias e participar das lives gratuitas.&nbsp;</p>
+            </div>
+
+            <div class="depoimentos-grid">
+                <div class="depoimento-item">
+                    <div class="depoimento-whatsapp">
+                        <img src="./depoimento1.jpg" alt="Depoimento 1">
+                    </div>
+                </div>
+                <div class="depoimento-item">
+                    <div class="depoimento-whatsapp">
+                        <img src="./depoimento2.jpg" alt="Depoimento 2">
+                    </div>
+                </div>
+                <div class="depoimento-item">
+                    <div class="depoimento-whatsapp">
+                        <img src="./depoimento3.jpg" alt="Depoimento 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="depoimentos-cta">
+                <a href="#" class="btn-premium btn-comunidade" onclick="event.preventDefault(); handleComunidadeClick();">
+                    Fazer Parte da Comunidade
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SEÇÃO AUTORIDADE / MENTORIA ======== -->
+    <section id="autoridade" class="autoridade section-padding fade-in">
+        <div class="container">
+            <div class="autoridade-content">
+                <div class="autoridade-foto-container">
+                    <div class="autoridade-foto">
+                        <img src="./mentor.jpg" alt="Foto de Yan Oliveira">
+                    </div>
+                </div>
+                
+                <h2 class="titulo-secao">Conheça seu último mentor: Yan Oliveira</h2>
+                <p class="autoridade-frase">
+                    "Sou a <span class="">prova</span> de que, com&nbsp;<span style="color: rgb(212, 175, 55);" class="">método, gestão e disciplina,&nbsp;</span>é possível&nbsp;<span class="">faturar nesse mercado</span> de forma consistente."
+                </p>
+                
+                <!-- ALTERAÇÃO: Adicionada a classe btn-mentoria -->
+                <a href="#" class="btn-premium btn-mentoria" onclick="event.preventDefault(); handleMentoriaClick();">
+                    Aprenda comigo aqui
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                © <span>Yan Oliveira</span> – Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <!-- ======== JAVASCRIPT ======== -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('load', handleScrollAnimation);
+        window.addEventListener('scroll', handleScrollAnimation);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        // ======== FUNÇÕES DE INTERAÇÃO COM WHATSAPP ========
+        
+        function handleComunidadeClick() {
+            const mensagem = encodeURIComponent('Olá, Yan! Vi seu site e quero fazer parte da comunidade.');
+            window.open(`https://wa.me/5522997301385?text=${mensagem}`, '_blank');
+        }
+
+        function handleIndicadorClick() {
+            const mensagem = encodeURIComponent('Olá, Yan! Tenho interesse no seu indicador MT4 exclusivo.');
+            window.open(`https://wa.me/5522997301385?text=${mensagem}`, '_blank');
+        }
+
+        function handleVIPClick() {
+            const mensagem = encodeURIComponent('Olá, Yan! Tenho interesse em entrar para o Grupo VIP.');
+            window.open(`https://wa.me/5522997301385?text=${mensagem}`, '_blank');
+        }
+
+        function handleMentoriaClick() {
+            const mensagem = encodeURIComponent('Quero fazer uma mentoria');
+            window.open(`https://wa.me/5522997301385?text=${mensagem}`, '_blank');
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => { clearTimeout(timeout); func(...args); };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        window.addEventListener('scroll', debounce(handleScrollAnimation, 50));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        function updateActiveSection() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                const correspondingLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                if (correspondingLink) {
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        correspondingLink.style.color = 'var(--dourado)';
+                    } else {
+                        correspondingLink.style.color = '';
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveSection);
+    </script>
+
+</body></html>
