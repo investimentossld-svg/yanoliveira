@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yan Oliveira - Estrategista Digital e Investidor</title>
+    <title>Yan Oliveira - Trader e Investidor</title>
     
     <!-- ======== FAVICON ======== -->
-    <!-- MUDANÇA: Links absolutos para o favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./favicon.png">
     
     
 <!-- ======== OPEN GRAPH - IMAGEM PARA WHATSAPP/REDES SOCIAIS ======== -->
-<meta property="og:title" content="Yan Oliveira - Estrategista Digital e Investidor">
-<meta property="og:description" content="Ensino pessoas a ganharem dinheiro no digital de forma estratégica, profissional e sustentável.">
-<!-- MUDANÇA: Link absoluto para a imagem OG -->
-<meta property="og:image" content="https://seu-usuario.github.io/og-image.jpg?v=2">
+<meta property="og:title" content="Yan Oliveira - Trader e Investidor">
+<meta property="og:description" content="Ensino pessoas a ganharem dinheiro no mercado de forma estratégica, profissional e sustentável.">
+<meta property="og:image" content="https://euarthurmartins.com/og-image.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<!-- MUDANÇA: Link absoluto para a URL do site -->
-<meta property="og:url" content="https://seu-usuario.github.io/">
+<meta property="og:url" content="https://euarthurmartins.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Yan Oliveira">
 <meta property="og:locale" content="pt_BR">
@@ -28,10 +25,9 @@
     
     <!-- ======== TWITTER CARD ======== -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yan Oliveira - Estrategista Digital e Investidor">
-<meta name="twitter:description" content="Ensino pessoas a ganharem dinheiro no digital de forma estratégica, profissional e sustentável.">
-<!-- MUDANÇA: Link absoluto para a imagem do Twitter Card -->
-<meta name="twitter:image" content="https://seu-usuario.github.io/og-image.jpg?v=2">
+<meta name="twitter:title" content="Yan Oliveira - Trader e Investidor">
+<meta name="twitter:description" content="Ensino pessoas a ganharem dinheiro no mercado de forma estratégica, profissional e sustentável.">
+<meta name="twitter:image" content="https://euarthurmartins.com/og-image.jpg?v=2"> <!-- <--- MUDA AQUI TAMBÉM -->
     
     <!-- Google Fonts - Tipografia Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -115,7 +111,7 @@
         .nav-left-group {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: wrap; /* Permite quebra de linha se necessário */
         }
 
         .nav-logo {
@@ -131,6 +127,7 @@
             color: var(--dourado);
         }
 
+        /* ======== ESTILO DO AVISO PULSANTE ======== */
         .nav-warning-pulse {
             font-family: var(--fonte-titulos);
             font-size: 24px;
@@ -142,9 +139,18 @@
         }
 
         @keyframes pulse-text {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .nav-menu {
@@ -213,13 +219,13 @@
         }
 
         .btn-premium:hover {
-            transform: scale(0.97);
+            transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
             background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado));
         }
 
         .btn-premium:active {
-            transform: scale(0.95);
+            transform: translateY(0);
         }
 
         .titulo-secao {
@@ -246,15 +252,24 @@
         .seta-pulsante {
             display: inline-block;
             margin-left: 10px;
-            font-size: 0.8em;
+            font-size: 0.8em; /* Tamanho proporcional ao texto */
             color: var(--dourado);
             animation: pulse-arrow 1.5s infinite;
         }
 
         @keyframes pulse-arrow {
-            0% { transform: translateY(0); opacity: 0.7; }
-            50% { transform: translateY(5px); opacity: 1; }
-            100% { transform: translateY(0); opacity: 0.7; }
+            0% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(5px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
         }
 
         .texto-descritivo {
@@ -268,16 +283,17 @@
         /* ======== HERO SECTION COM BANNER ======== */
         .hero {
             height: auto;
-            background-color: #000000;
+            background-color: #000000; /* Fundo preto sólido */
             display: flex;
             flex-direction: column;
             position: relative;
-            padding-top: 80px;
+            padding-top: 80px; /* RESTAURADO: Volta ao tamanho original */
         }
 
         .hero-image-container {
             width: 100%;
-            height: 550px;
+            /* Usando altura fixa para mobile e aspect-ratio para desktop */
+            height: 550px; /* Altura fixa para mobile */
             position: relative;
             overflow: hidden;
             display: flex;
@@ -287,8 +303,8 @@
 
         @media (min-width: 769px) {
             .hero-image-container {
-                aspect-ratio: 1920 / 550;
-                height: auto;
+                aspect-ratio: 1920 / 550; /* Proporção para desktop */
+                height: auto; /* Sobrescreve a altura fixa */
             }
         }
 
@@ -303,7 +319,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: center; /* Padrão, será sobrescrito pelo <picture> */
             transition: transform 0.5s ease;
         }
 
@@ -311,46 +327,65 @@
             transform: scale(1.05);
         }
 
+        /* SOMBRA ESQUERDA - EFEITO DE TRANSIÇÃO */
         .hero-shadow-left {
             position: absolute;
             top: 0;
             left: 0;
             width: 200px;
             height: 100%;
-            background: linear-gradient(90deg, rgba(13, 13, 13, 0.8) 0%, rgba(13, 13, 13, 0.4) 50%, transparent 100%);
+            background: linear-gradient(90deg, 
+                rgba(13, 13, 13, 0.8) 0%, 
+                rgba(13, 13, 13, 0.4) 50%, 
+                transparent 100%);
             z-index: 1;
             pointer-events: none;
         }
 
+        /* SOMBRA DIREITA - EFEITO DE TRANSIÇÃO */
         .hero-shadow-right {
             position: absolute;
             top: 0;
             right: 0;
             width: 200px;
             height: 100%;
-            background: linear-gradient(-90deg, rgba(13, 13, 13, 0.8) 0%, rgba(13, 13, 13, 0.4) 50%, transparent 100%);
+            background: linear-gradient(-90deg, 
+                rgba(13, 13, 13, 0.8) 0%, 
+                rgba(13, 13, 13, 0.4) 50%, 
+                transparent 100%);
             z-index: 1;
             pointer-events: none;
         }
 
+        /* TRANSIÇÃO DISCRETA COM GRADIENTE - VERSÃO MELHORADA */
         .hero-shadow-bottom {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 250px;
-            background: linear-gradient(to top, rgba(13, 13, 13, 0.9) 0%, rgba(13, 13, 13, 0.7) 30%, rgba(13, 13, 13, 0.4) 60%, rgba(13, 13, 13, 0.2) 80%, transparent 100%);
+            height: 250px; /* Aumentei a altura para uma transição mais suave */
+            background: linear-gradient(to top, 
+                rgba(13, 13, 13, 0.9) 0%, 
+                rgba(13, 13, 13, 0.7) 30%,
+                rgba(13, 13, 13, 0.4) 60%,
+                rgba(13, 13, 13, 0.2) 80%,
+                transparent 100%);
             z-index: 2;
             pointer-events: none;
         }
 
+        /* ======== LINHA DOURADA ENVELHECIDA ======== */
         .hero-gold-line {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, transparent, var(--dourado-escuro) 15%, var(--dourado-escuro) 85%, transparent);
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--dourado-escuro) 15%, 
+                var(--dourado-escuro) 85%, 
+                transparent);
             z-index: 3;
             pointer-events: none;
             box-shadow: 0 0 10px rgba(184, 148, 31, 0.4);
@@ -358,61 +393,70 @@
         
         /* ======== SEÇÃO PLATAFORMAS DE INVESTIMENTO ======== */
         .plataformas {
-            background: #000000;
+            background: #000000; /* Alterado para preto puro */
             border-top: 1px solid var(--cinza-escuro);
-            padding-top: 60px;
-            padding-bottom: 120px;
+            padding-top: 60px; /* Mantém o espaçamento superior reduzido */
+            padding-bottom: 120px; /* Mantém o espaçamento inferior original */
         }
 
+        /* ======== NOVO ESTILO PARA BOTÕES DE IMAGEM ======== */
         .botoes-imagem-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            grid-template-columns: 1fr 1fr; /* 2 colunas no desktop */
+            gap: 25px; /* Espaçamento entre os botões */
             margin-top: 60px;
             width: 100%;
         }
 
         .botao-imagem-link {
-            display: block;
+            display: block; /* Faz o link preencher o espaço da célula do grid */
             position: relative;
             overflow: hidden;
+            /* Removido border-radius para eliminar bordas arredondadas */
             transition: transform 0.3s ease;
-            background-color: transparent;
+            /* Removido box-shadow para eliminar sombras */
+            background-color: transparent; /* Garante fundo transparente */
+            /* Estado inicial para animação */
             opacity: 0;
             transform: translateX(-50px);
         }
 
+        /* EFEITO DE HOVER CORRIGIDO: Diminui o botão em vez de aumentar */
         .botao-imagem-link:hover {
-            transform: scale(0.97);
+            transform: scale(0.97); /* Diminui levemente o botão */
+            /* Removido box-shadow para eliminar sombras */
         }
 
         .botao-imagem {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: contain; /* Alterado de cover para contain para evitar cortes */
             display: block;
             transition: transform 0.4s ease;
-            background-color: transparent;
+            background-color: transparent; /* Garante fundo transparente */
         }
 
+        /* Classes para animação de entrada */
         .botao-imagem-link.visible {
             opacity: 1;
             transform: translateX(0);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* REDUZIDO: De 0.8s para 0.4s */
         }
 
+        /* Animação alternada para botões pares (entrar da direita) */
         .botao-imagem-link:nth-child(even) {
-            transform: translateX(50px);
+            transform: translateX(50px); /* Começa da direita */
         }
 
         .botao-imagem-link:nth-child(even).visible {
-            transform: translateX(0);
+            transform: translateX(0); /* Vai para a posição normal */
         }
 
-        .botao-imagem-link:nth-child(1) { transition-delay: 0.05s; }
-        .botao-imagem-link:nth-child(2) { transition-delay: 0.1s; }
-        .botao-imagem-link:nth-child(3) { transition-delay: 0.15s; }
-        .botao-imagem-link:nth-child(4) { transition-delay: 0.2s; }
+        /* Atraso na animação para cada botão - REDUZIDO */
+        .botao-imagem-link:nth-child(1) { transition-delay: 0.05s; } /* REDUZIDO: De 0.1s para 0.05s */
+        .botao-imagem-link:nth-child(2) { transition-delay: 0.1s; }  /* REDUZIDO: De 0.2s para 0.1s */
+        .botao-imagem-link:nth-child(3) { transition-delay: 0.15s; } /* REDUZIDO: De 0.3s para 0.15s */
+        .botao-imagem-link:nth-child(4) { transition-delay: 0.2s; }  /* REDUZIDO: De 0.4s para 0.2s */
         
         /* ======== FOOTER ======== */
         footer {
@@ -436,8 +480,14 @@
 
         /* ======== ANIMAÇÕES ======== */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeIn {
@@ -446,8 +496,14 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .fade-in {
@@ -463,7 +519,10 @@
 
         /* ======== RESPONSIVIDADE ======== */
         @media (max-width: 768px) {
-            .nav-warning-pulse { display: none; }
+            .nav-warning-pulse {
+                display: none; /* Esconde o aviso em telas pequenas */
+            }
+
             .nav-menu {
                 position: fixed;
                 left: -100%;
@@ -477,82 +536,142 @@
                 padding: 20px 0;
                 gap: 20px;
             }
-            .nav-menu.active { left: 0; }
-            .titulo-secao { font-size: 36px; }
-            .section-padding { padding: 80px 0; }
-            .plataformas { padding-top: 40px; }
-            .hero-shadow-left, .hero-shadow-right { width: 80px; }
-            .botoes-imagem-grid {
-                grid-template-columns: 1fr;
-                gap: 35px;
+
+            .nav-menu.active {
+                left: 0;
             }
-            .hero-image-container { height: 450px; }
+
+            .titulo-secao {
+                font-size: 36px;
+            }
+
+            .section-padding {
+                padding: 80px 0;
+            }
+
+            /* AJUSTE PARA SUBIR A SEÇÃO PLATAFORMAS NO MOBILE */
+            .plataformas {
+                padding-top: 40px; /* Espaçamento ainda menor no mobile */
+            }
+
+            /* SOMBRAS MENORES EM MOBILE */
+            .hero-shadow-left,
+            .hero-shadow-right {
+                width: 80px; /* Ajustado para a nova altura do banner */
+            }
+
+            /* RESPONSIVIDADE PARA O GRID DE BOTÕES */
+            .botoes-imagem-grid {
+                grid-template-columns: 1fr; /* 1 coluna no mobile */
+                gap: 35px; /* AUMENTADO: De 20px para 35px - mais espaçamento no celular */
+            }
+
+            /* ALTURA DO BANNER MENOR NO MOBILE PARA CABER NA TELA */
+            .hero-image-container {
+                height: 450px; /* REDUZIDO: De 550px para 450px */
+            }
         }
 
         @media (max-width: 480px) {
-            .titulo-secao { font-size: 30px; }
-            .section-padding { padding: 60px 0; }
-            .hero-image-container { height: 350px; }
-            .hero-shadow-left, .hero-shadow-right { width: 40px; }
-            .botoes-imagem-grid { gap: 40px; }
+            .titulo-secao {
+                font-size: 30px;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            /* ALTURA DO BANNER AINDA MENOR EM TELAS PEQUENAS */
+            .hero-image-container {
+                height: 350px; /* REDUZIDO: De 450px para 350px */
+            }
+
+            .hero-shadow-left,
+            .hero-shadow-right {
+                width: 40px; /* Ajustado para a nova altura do banner */
+            }
+
+            /* AINDA MAIS ESPAÇAMENTO EM TELAS MUITO PEQUENAS */
+            .botoes-imagem-grid {
+                gap: 40px; /* AUMENTADO: De 35px para 40px */
+            }
         }
     </style>
 </head>
 <body>
+    <!-- ======== MENU DE NAVEGAÇÃO ======== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            <!-- Grupo do lado esquerdo (Logo + Aviso) -->
             <div class="nav-left-group">
                 <a href="#home" class="nav-logo">Yan <span>Oliveira</span></a>
                 <span class="nav-warning-pulse"></span>
             </div>
-            <ul class="nav-menu" id="navMenu"></ul>
+            <ul class="nav-menu" id="navMenu">
+                <!-- Menu vazio, mas a estrutura é mantida -->
+            </ul>
         </div>
     </nav>
 
+    <!-- ======== HERO SECTION COM BANNER ======== -->
     <section class="hero" id="home">
+        <!-- IMAGEM BANNER NO TOPO COM EFEITOS DE SOMBRA -->
         <div class="hero-image-container">
             <div class="hero-image-wrapper">
                 <div class="hero-image-placeholder">
+                    <!-- USANDO <picture> PARA DIFERENTES IMAGENS (ART DIRECTION) -->
                     <picture>
-                        <!-- MUDANÇA: Links absolutos para as imagens do banner -->
-                        <source media="(min-width: 769px)" srcset="/banner-desktop.jpg">
-                        <source srcset="/banner-mobile.jpg">
-                        <img src="/banner-desktop.jpg" alt="Yan Oliveira - Estrategista Digital e Investidor" class="hero-image">
+                        <!-- PARA DESKTOP (TELAS GRANDES, 769px ou mais) -->
+                        <source media="(min-width: 769px)" srcset="./banner-desktop.jpg">
+                        <!-- PARA CELULAR (TELAS PEQUENAS, até 768px) -->
+                        <source srcset="./banner-mobile.jpg">
+                        <!-- IMAGEM PADRÃO (FALLBACK) - Usada se nenhuma media query for correspondida -->
+                        <img src="./banner-desktop.jpg" alt="Yan Oliveira - Estrategista Digital e Investidor" class="hero-image">
                     </picture>
+                    <!-- TRANSIÇÃO DISCRETA COM GRADIENTE -->
                     <div class="hero-shadow-bottom"></div>
+                    <!-- LINHA DOURADA ENVELHECIDA -->
                     <div class="hero-gold-line"></div>
                 </div>
+                <!-- SOMBRAS LATERAIS -->
                 <div class="hero-shadow-left"></div>
                 <div class="hero-shadow-right"></div>
             </div>
         </div>
+        <!-- SEÇÃO DE TEXTO E BOTÃO REMOVIDA AQUI -->
     </section>
 
+    <!-- ======== SEÇÃO PLATAFORMAS DE INVESTIMENTO ======== -->
     <section id="plataformas" class="plataformas section-padding fade-in">
         <div class="container">
             <h2 class="titulo-secao">Alguns links que podem te ajudar<span class="seta-pulsante">↓</span></h2>
             
+            <!-- NOVO GRID DE BOTÕES COM IMAGEM -->
             <div class="botoes-imagem-grid">
-                <!-- MUDANÇA: Links absolutos para as imagens dos botões -->
+                <!-- Botão 1: ENTRAR NA LIVE (ALTERADO) -->
                 <a href="https://wa.me/5511945905781?text=Quero%20entrar%20no%20grupo%20vip" target="_blank" class="botao-imagem-link" title="Entrar no grupo VIP de Yan Oliveira" aria-label="Entrar no grupo VIP de Yan Oliveira">
-                    <img src="/botao-entrar-na-live.png" alt="Botão para entrar no grupo VIP de Yan Oliveira" class="botao-imagem" loading="lazy">
+                    <img src="./botao-entrar-na-live.png" alt="Botão para entrar no grupo VIP de Yan Oliveira" class="botao-imagem" loading="lazy">
                 </a>
 
+                <!-- Botão 2: Forex (ALTERADO) -->
                 <a href="https://wa.me/5511945905781?text=Quero%20saber%20mais" target="_blank" class="botao-imagem-link" title="Saber mais sobre Forex com Yan Oliveira" aria-label="Saber mais sobre Forex com Yan Oliveira">
-                    <img src="/botao-forex.png" alt="Botão para saber mais sobre Forex com Yan Oliveira" class="botao-imagem" loading="lazy">
+                    <img src="./botao-forex.png" alt="Botão para saber mais sobre Forex com Yan Oliveira" class="botao-imagem" loading="lazy">
                 </a>
 
+                <!-- Botão 3: Opções (ALTERADO) -->
                 <a href="https://trade.obynexbroker.com/register?aff=788123&amp;aff_model=revenue&amp;afftrack=" target="_blank" class="botao-imagem-link" title="Cadastrar na corretora de Opções" aria-label="Cadastrar na corretora de Opções">
-                    <img src="/botao-opcoes.jpg" alt="Botão para se cadastrar na corretora de Opções" class="botao-imagem" loading="lazy">
+                    <img src="./botao-opcoes.jpg" alt="Botão para se cadastrar na corretora de Opções" class="botao-imagem" loading="lazy">
                 </a>
 
+                <!-- Botão 4: Conheça Meu Trabalho (ALTERADO) -->
                 <a href="https://yantrader.com/" target="_blank" class="botao-imagem-link" title="Conheça o trabalho de Yan Oliveira" aria-label="Conheça o trabalho de Yan Oliveira">
-                    <img src="/botao-conheca-meu-trabalho.jpg" alt="Botão para conhecer o trabalho de Yan Oliveira" class="botao-imagem" loading="lazy">
+                    <img src="./botao-conheca-meu-trabalho.jpg" alt="Botão para conhecer o trabalho de Yan Oliveira" class="botao-imagem" loading="lazy">
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- ======== FOOTER ======== -->
     <footer>
         <div class="container">
             <p class="footer-text">
@@ -561,7 +680,9 @@
         </div>
     </footer>
 
+    <!-- ======== JAVASCRIPT ======== -->
     <script>
+        // ======== SCROLL DO NAVBAR ========
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 100) {
@@ -571,20 +692,27 @@
             }
         });
 
+        // ======== ANIMAÇÃO AO SCROLL ========
         function handleScrollAnimation() {
             const elements = document.querySelectorAll('.fade-in');
+            
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
+                
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.classList.add('visible');
                 }
             });
+
+            // Animação específica para os botões de imagem - SIMPLIFICADA
             const botoes = document.querySelectorAll('.botao-imagem-link');
             botoes.forEach((botao) => {
                 const botaoTop = botao.getBoundingClientRect().top;
                 const botaoVisible = 150;
+                
                 if (botaoTop < window.innerHeight - botaoVisible) {
+                    // Remove o setTimeout e adiciona a classe imediatamente
                     botao.classList.add('visible');
                 }
             });
@@ -593,6 +721,7 @@
         window.addEventListener('load', handleScrollAnimation);
         window.addEventListener('scroll', handleScrollAnimation);
 
+        // ======== SMOOTH SCROLL ========
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -610,10 +739,12 @@
             });
         });
 
+        // ======== PREVENIR SELEÇÃO ======== -->
         document.querySelectorAll('.btn-premium').forEach(btn => {
             btn.addEventListener('selectstart', e => e.preventDefault());
         });
 
+        // ======== DEBOUNCE PARA PERFORMANCE ======== -->
         function debounce(func, wait) {
             let timeout;
             return function executedFunction(...args) {
@@ -628,6 +759,7 @@
 
         window.addEventListener('scroll', debounce(handleScrollAnimation, 50));
 
+        // ======== EFEITO DE ENTRADA ======== -->
         document.addEventListener('DOMContentLoaded', () => {
             document.body.style.opacity = '0';
             setTimeout(() => {
@@ -636,14 +768,17 @@
             }, 100);
         });
 
+        // ======== DESTACAR SEÇÃO ATIVA NO MENU ======== -->
         function updateActiveSection() {
             const sections = document.querySelectorAll('section[id]');
             const scrollY = window.pageYOffset;
+
             sections.forEach(section => {
                 const sectionHeight = section.offsetHeight;
                 const sectionTop = section.offsetTop - 100;
                 const sectionId = section.getAttribute('id');
                 const correspondingLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                
                 if (correspondingLink) {
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                         correspondingLink.style.color = 'var(--dourado)';
