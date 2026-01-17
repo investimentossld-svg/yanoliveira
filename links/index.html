@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yan Oliveira - Estrategista Digital e Investidor</title>
+    
+    <!-- ======== FAVICON ======== -->
+    <!-- MUDANÇA: Links absolutos para o favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    
+    
+<!-- ======== OPEN GRAPH - IMAGEM PARA WHATSAPP/REDES SOCIAIS ======== -->
+<meta property="og:title" content="Yan Oliveira - Estrategista Digital e Investidor">
+<meta property="og:description" content="Ensino pessoas a ganharem dinheiro no digital de forma estratégica, profissional e sustentável.">
+<!-- MUDANÇA: Link absoluto para a imagem OG -->
+<meta property="og:image" content="https://seu-usuario.github.io/og-image.jpg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- MUDANÇA: Link absoluto para a URL do site -->
+<meta property="og:url" content="https://seu-usuario.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yan Oliveira">
+<meta property="og:locale" content="pt_BR">
+
+    
+    <!-- ======== TWITTER CARD ======== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yan Oliveira - Estrategista Digital e Investidor">
+<meta name="twitter:description" content="Ensino pessoas a ganharem dinheiro no digital de forma estratégica, profissional e sustentável.">
+<!-- MUDANÇA: Link absoluto para a imagem do Twitter Card -->
+<meta name="twitter:image" content="https://seu-usuario.github.io/og-image.jpg?v=2">
+    
+    <!-- Google Fonts - Tipografia Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ======== RESET E CONFIGURAÇÕES GERAIS ======== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Paleta de cores profissional escura */
+            --preto-fundo: #0d0d0d;
+            --preto-primario: #1a1a1a;
+            --preto-secundario: #262626;
+            --cinza-escuro: #404040;
+            --cinza-medio: #525252;
+            --cinza-claro: #a3a3a3;
+            --branco-suave: #f5f5f5;
+            --dourado: #d4af37;
+            --dourado-escuro: #b8941f;
+            --azul-profundo: #1e293b;
+            
+            /* Tipografia */
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-corpo: 'Inter', sans-serif;
+            
+            /* Sombras e efeitos */
+            --sombra-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --sombra-suave: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            --transicao-suave: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fonte-corpo);
+            background-color: var(--preto-fundo);
+            color: var(--branco-suave);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ======== MENU DE NAVEGAÇÃO ======== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--cinza-escuro);
+            transition: var(--transicao-suave);
+        }
+
+        .navbar.scrolled {
+            padding: 15px 0;
+            background: rgba(13, 13, 13, 0.98);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            font-family: var(--fonte-titulos);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--branco-suave);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo span {
+            color: var(--dourado);
+        }
+
+        .nav-warning-pulse {
+            font-family: var(--fonte-titulos);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dourado);
+            margin-left: 20px;
+            white-space: nowrap;
+            animation: pulse-text 2s infinite;
+        }
+
+        @keyframes pulse-text {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--cinza-claro);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: var(--transicao-suave);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--branco-suave);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--dourado);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ======== CLASSES UTILITÁRIAS ======== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        .btn-premium {
+            display: inline-block;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+            color: var(--preto-fundo);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.8px;
+            border-radius: 2px;
+            transition: var(--transicao-suave);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .btn-premium:hover {
+            transform: scale(0.97);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+            background: linear-gradient(135deg, var(--dourado-escuro), var(--dourado));
+        }
+
+        .btn-premium:active {
+            transform: scale(0.95);
+        }
+
+        .titulo-secao {
+            font-family: var(--fonte-titulos);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--branco-suave);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .titulo-secao::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--dourado);
+        }
+
+        /* ======== SETA PULSANTE ======== */
+        .seta-pulsante {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 0.8em;
+            color: var(--dourado);
+            animation: pulse-arrow 1.5s infinite;
+        }
+
+        @keyframes pulse-arrow {
+            0% { transform: translateY(0); opacity: 0.7; }
+            50% { transform: translateY(5px); opacity: 1; }
+            100% { transform: translateY(0); opacity: 0.7; }
+        }
+
+        .texto-descritivo {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--cinza-claro);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* ======== HERO SECTION COM BANNER ======== */
+        .hero {
+            height: auto;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 550px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 769px) {
+            .hero-image-container {
+                aspect-ratio: 1920 / 550;
+                height: auto;
+            }
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-wrapper:hover .hero-image {
+            transform: scale(1.05);
+        }
+
+        .hero-shadow-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(13, 13, 13, 0.8) 0%, rgba(13, 13, 13, 0.4) 50%, transparent 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-shadow-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(-90deg, rgba(13, 13, 13, 0.8) 0%, rgba(13, 13, 13, 0.4) 50%, transparent 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-shadow-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 250px;
+            background: linear-gradient(to top, rgba(13, 13, 13, 0.9) 0%, rgba(13, 13, 13, 0.7) 30%, rgba(13, 13, 13, 0.4) 60%, rgba(13, 13, 13, 0.2) 80%, transparent 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-gold-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--dourado-escuro) 15%, var(--dourado-escuro) 85%, transparent);
+            z-index: 3;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(184, 148, 31, 0.4);
+        }
+        
+        /* ======== SEÇÃO PLATAFORMAS DE INVESTIMENTO ======== */
+        .plataformas {
+            background: #000000;
+            border-top: 1px solid var(--cinza-escuro);
+            padding-top: 60px;
+            padding-bottom: 120px;
+        }
+
+        .botoes-imagem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 60px;
+            width: 100%;
+        }
+
+        .botao-imagem-link {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background-color: transparent;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .botao-imagem-link:hover {
+            transform: scale(0.97);
+        }
+
+        .botao-imagem {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.4s ease;
+            background-color: transparent;
+        }
+
+        .botao-imagem-link.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .botao-imagem-link:nth-child(even) {
+            transform: translateX(50px);
+        }
+
+        .botao-imagem-link:nth-child(even).visible {
+            transform: translateX(0);
+        }
+
+        .botao-imagem-link:nth-child(1) { transition-delay: 0.05s; }
+        .botao-imagem-link:nth-child(2) { transition-delay: 0.1s; }
+        .botao-imagem-link:nth-child(3) { transition-delay: 0.15s; }
+        .botao-imagem-link:nth-child(4) { transition-delay: 0.2s; }
+        
+        /* ======== FOOTER ======== */
+        footer {
+            background: var(--preto-fundo);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--cinza-escuro);
+        }
+
+        .footer-text {
+            color: var(--cinza-medio);
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .footer-text span {
+            color: var(--dourado);
+            font-weight: 600;
+        }
+
+        /* ======== ANIMAÇÕES ======== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ======== RESPONSIVIDADE ======== */
+        @media (max-width: 768px) {
+            .nav-warning-pulse { display: none; }
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--preto-primario);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--sombra-suave);
+                padding: 20px 0;
+                gap: 20px;
+            }
+            .nav-menu.active { left: 0; }
+            .titulo-secao { font-size: 36px; }
+            .section-padding { padding: 80px 0; }
+            .plataformas { padding-top: 40px; }
+            .hero-shadow-left, .hero-shadow-right { width: 80px; }
+            .botoes-imagem-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            .hero-image-container { height: 450px; }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-secao { font-size: 30px; }
+            .section-padding { padding: 60px 0; }
+            .hero-image-container { height: 350px; }
+            .hero-shadow-left, .hero-shadow-right { width: 40px; }
+            .botoes-imagem-grid { gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left-group">
+                <a href="#home" class="nav-logo">Yan <span>Oliveira</span></a>
+                <span class="nav-warning-pulse"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu"></ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-image-container">
+            <div class="hero-image-wrapper">
+                <div class="hero-image-placeholder">
+                    <picture>
+                        <!-- MUDANÇA: Links absolutos para as imagens do banner -->
+                        <source media="(min-width: 769px)" srcset="/banner-desktop.jpg">
+                        <source srcset="/banner-mobile.jpg">
+                        <img src="/banner-desktop.jpg" alt="Yan Oliveira - Estrategista Digital e Investidor" class="hero-image">
+                    </picture>
+                    <div class="hero-shadow-bottom"></div>
+                    <div class="hero-gold-line"></div>
+                </div>
+                <div class="hero-shadow-left"></div>
+                <div class="hero-shadow-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plataformas" class="plataformas section-padding fade-in">
+        <div class="container">
+            <h2 class="titulo-secao">Alguns links que podem te ajudar<span class="seta-pulsante">↓</span></h2>
+            
+            <div class="botoes-imagem-grid">
+                <!-- MUDANÇA: Links absolutos para as imagens dos botões -->
+                <a href="https://wa.me/5511945905781?text=Quero%20entrar%20no%20grupo%20vip" target="_blank" class="botao-imagem-link" title="Entrar no grupo VIP de Yan Oliveira" aria-label="Entrar no grupo VIP de Yan Oliveira">
+                    <img src="/botao-entrar-na-live.png" alt="Botão para entrar no grupo VIP de Yan Oliveira" class="botao-imagem" loading="lazy">
+                </a>
+
+                <a href="https://wa.me/5511945905781?text=Quero%20saber%20mais" target="_blank" class="botao-imagem-link" title="Saber mais sobre Forex com Yan Oliveira" aria-label="Saber mais sobre Forex com Yan Oliveira">
+                    <img src="/botao-forex.png" alt="Botão para saber mais sobre Forex com Yan Oliveira" class="botao-imagem" loading="lazy">
+                </a>
+
+                <a href="https://trade.obynexbroker.com/register?aff=788123&amp;aff_model=revenue&amp;afftrack=" target="_blank" class="botao-imagem-link" title="Cadastrar na corretora de Opções" aria-label="Cadastrar na corretora de Opções">
+                    <img src="/botao-opcoes.jpg" alt="Botão para se cadastrar na corretora de Opções" class="botao-imagem" loading="lazy">
+                </a>
+
+                <a href="https://yantrader.com/" target="_blank" class="botao-imagem-link" title="Conheça o trabalho de Yan Oliveira" aria-label="Conheça o trabalho de Yan Oliveira">
+                    <img src="/botao-conheca-meu-trabalho.jpg" alt="Botão para conhecer o trabalho de Yan Oliveira" class="botao-imagem" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                © <span>Yan Oliveira</span> – Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+            const botoes = document.querySelectorAll('.botao-imagem-link');
+            botoes.forEach((botao) => {
+                const botaoTop = botao.getBoundingClientRect().top;
+                const botaoVisible = 150;
+                if (botaoTop < window.innerHeight - botaoVisible) {
+                    botao.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('load', handleScrollAnimation);
+        window.addEventListener('scroll', handleScrollAnimation);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn-premium').forEach(btn => {
+            btn.addEventListener('selectstart', e => e.preventDefault());
+        });
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        window.addEventListener('scroll', debounce(handleScrollAnimation, 50));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        function updateActiveSection() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                const correspondingLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                if (correspondingLink) {
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        correspondingLink.style.color = 'var(--dourado)';
+                    } else {
+                        correspondingLink.style.color = '';
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveSection);
+    </script>
+
+</body></html>
